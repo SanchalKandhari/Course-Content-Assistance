@@ -1,0 +1,135 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 24px 80px; /* Increased top padding to clear fixed header */
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.landing-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.landing-header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.landing-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.landing-actions {
+  margin-bottom: 64px;
+}
+
+.btn-new-notebook {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: #fff;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-new-notebook:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.4);
+}
+
+.recent-notebooks-section {
+  width: 100%;
+}
+
+.recent-notebooks-section h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.notebook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.notebook-card {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.notebook-card:hover {
+  transform: translateY(-4px);
+  border-color: #6366f1;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+}
+
+.btn-delete-session {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.notebook-card:hover .btn-delete-session {
+  opacity: 1;
+}
+
+.btn-delete-session:hover {
+  color: #ef4444;
+}
+
+.notebook-icon {
+  font-size: 2rem;
+}
+
+.notebook-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notebook-meta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px;
+  background: var(--bg-input);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
